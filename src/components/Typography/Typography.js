@@ -4,14 +4,31 @@ import { font } from 'theme';
 
 const isTitle = type => type === 'title';
 
+const getStylesForType = type => {
+  switch (type) {
+    case 'title':
+      return {
+        color: font.highEmphasisColor,
+        fontSize: '2rem',
+      };
+    case 'subtitle':
+      return {
+        color: font.highEmphasisColor,
+        fontSize: '1.5rem',
+      };
+    case 'body':
+      return {
+        color: font.mediumEmphasisColor,
+        fontSize: '1rem',
+      };
+  }
+};
+
 export const Typography = styled.p(
   {
     fontFamily: font.fontFamily,
   },
-  ({ type }) => ({
-    color: isTitle(type) ? font.highEmphasisColor : font.mediumEmphasisColor,
-    fontSize: isTitle(type) ? '2rem' : '1rem',
-  })
+  ({ type }) => getStylesForType(type)
 );
 
 Typography.defaultProps = {

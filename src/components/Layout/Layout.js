@@ -15,7 +15,7 @@ import 'sanitize.css';
 const Container = styled.div({
   margin: '0 auto',
   minWidth: 600,
-  maxWidth: 960,
+  maxWidth: 800,
   padding: '1.45rem 1.0875rem',
 });
 
@@ -40,7 +40,7 @@ export const Layout = ({ children }) => (
           <Navbar>
             <Navbar.Link to={'/'}>Home</Navbar.Link>
             <Navbar.Link to={'/our-school'}>Our School</Navbar.Link>
-            <Navbar.Link to={'/class-times'}>Class Times</Navbar.Link>
+            <Navbar.Link to={'/classes'}>Classes</Navbar.Link>
             <Navbar.Link to={'/faq'}>FAQ</Navbar.Link>
             <Navbar.Link to={'/system'}>System</Navbar.Link>
             <Navbar.Link to={'/family'}>Family</Navbar.Link>

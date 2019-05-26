@@ -3,7 +3,7 @@ import { Layout, SEO, Typography } from 'components';
 
 const OurSchool = () => (
   <Layout>
-    <SEO title="About" />
+    <SEO title="Our School" />
     <Typography type={'title'}>Our School</Typography>
     <Typography type={'body'}>
       Our school maintains a close relationship with Sunny Tang (Dunn Wah) in
@@ -15,13 +15,6 @@ const OurSchool = () => (
     <Typography type={'body'}>
       Though lineage isn't everything, we believe it's important for the drinker
       to consider the source of his water, in that spirit here is our lineage.
-    </Typography>
-    <Typography type={'title'}>Our School</Typography>
-    <Typography type={'body'}>
-      Our school maintains a close relationship with Sunny Tang (Dunn Wah) in
-      Toronto. We believe in creating a safe supportive environment to study
-      Kung Fu. We are a helpful tight knit group. We believe immersion is the
-      best way to learn anything.
     </Typography>
     <Typography type={'title'}>Our Sifu</Typography>
     <Typography type={'body'}>

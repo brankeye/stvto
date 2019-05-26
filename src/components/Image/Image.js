@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { colors } from 'theme';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -29,7 +30,11 @@ export const Image = ({ name }) => {
       `}
       render={data => (
         <div style={{ width: 100 }}>
-          <Img fluid={data.image.childImageSharp.fluid} />
+          <Img
+            fluid={data.image.childImageSharp.fluid}
+            fadeIn={false}
+            backgroundColor={colors.red}
+          />
         </div>
       )}
     />

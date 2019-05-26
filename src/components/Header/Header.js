@@ -3,49 +3,68 @@ import { Link, Typography, Image } from 'components';
 import { colors } from 'theme';
 import styled from '@emotion/styled';
 
-const StyledHeader = styled.header({
+const Container = styled.header({
   background: colors.red,
   marginBottom: `1.45rem`,
 });
 
 export const Header = ({ siteTitle, children }) => (
-  <StyledHeader>
-    <div
-      style={{
-        margin: `0 auto`,
-        minWidth: 600,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <header>
+    <Container>
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'row',
-          flex: 1,
-          alignItems: 'center',
+          margin: `0 auto`,
+          minWidth: 600,
+          maxWidth: 800,
+          padding: `1.45rem 1.0875rem`,
         }}
       >
-        <Image name={'crest'} />
-        <Typography
-          type={'title'}
-          style={{ marginLeft: '1.5rem', letterSpacing: '0.2rem' }}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            flex: 1,
+            alignItems: 'center',
+          }}
         >
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </Typography>
-      </div>
+          <Image name={'crest'} />
+          <div>
+            <Typography
+              type={'title'}
+              style={{
+                margin: 0,
+                marginLeft: '2rem',
+                letterSpacing: '0.2rem',
+              }}
+            >
+              <Link
+                to="/"
+                style={{
+                  color: '#FFFFFF',
+                  textDecoration: `none`,
+                }}
+              >
+                {siteTitle}
+              </Link>
+            </Typography>
+            <Typography
+              type={'subtitle'}
+              style={{
+                margin: 0,
+                marginLeft: '2rem',
+                color: 'rgba(255, 255, 255, 0.90)',
+                fontSize: '1rem',
+              }}
+            >
+              Sensitivity, Coordination, Timing, Balance, and Relaxation
+            </Typography>
+          </div>
+        </div>
 
-      {children}
-    </div>
-  </StyledHeader>
+        {children}
+      </div>
+    </Container>
+  </header>
 );
 
 Header.defaultProps = {
