@@ -1,1 +1,1 @@
-export { colors } from './theme';
+export { colors, font } from './theme';

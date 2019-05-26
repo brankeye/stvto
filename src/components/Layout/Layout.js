@@ -6,10 +6,22 @@
  */
 
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
-import { Header } from '../Header';
-import { Navbar } from '../Navbar';
-import './Layout.css';
+import { StaticQuery, graphql } from 'gatsby';
+import { Header, Navbar, Typography } from 'components';
+import styled from '@emotion/styled';
+import { font } from 'theme';
+import 'sanitize.css';
+
+const Container = styled.div({
+  margin: '0 auto',
+  minWidth: 600,
+  maxWidth: 960,
+  padding: '1.45rem 1.0875rem',
+});
+
+const Footer = styled.footer({
+  paddingTop: '2rem',
+});
 
 export const Layout = ({ children }) => (
   <StaticQuery
@@ -24,24 +36,24 @@ export const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
+        <Header siteTitle={data.site.siteMetadata.title}>
           <Navbar>
-            <Link to={'/'}>Home</Link>
-            <Link to={'/our-school'}>Our School</Link>
+            <Navbar.Link to={'/'}>Home</Navbar.Link>
+            <Navbar.Link to={'/our-school'}>Our School</Navbar.Link>
+            <Navbar.Link to={'/class-times'}>Class Times</Navbar.Link>
+            <Navbar.Link to={'/faq'}>FAQ</Navbar.Link>
+            <Navbar.Link to={'/system'}>System</Navbar.Link>
+            <Navbar.Link to={'/family'}>Family</Navbar.Link>
           </Navbar>
+        </Header>
+        <Container>
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()} Sunny Tang Ving Tsun Orleans
-          </footer>
-        </div>
+          <Footer>
+            <Typography type={'body'}>
+              © {new Date().getFullYear()} Sunny Tang Ving Tsun Orleans
+            </Typography>
+          </Footer>
+        </Container>
       </>
     )}
   />

@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from '../Link';
 import styled from '@emotion/styled';
+import { colors } from 'theme';
 
 const Nav = styled.nav({
   padding: 0,
@@ -8,7 +10,7 @@ const Nav = styled.nav({
 
 const NavList = styled.ul({ display: 'flex', flex: 1, listStyle: 'none' });
 
-const NavItem = styled.li({ marginRight: 10 });
+const NavItem = styled.li({ marginRight: '2rem' });
 
 export const Navbar = ({ children }) => (
   <Nav>
@@ -19,3 +21,8 @@ export const Navbar = ({ children }) => (
     </NavList>
   </Nav>
 );
+
+Navbar.Link = styled(Link)({
+  textDecoration: 'none',
+  color: colors.white,
+});

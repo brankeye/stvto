@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { Layout, Image, SEO } from 'components';
+import { Layout, Image, SEO, Typography } from 'components';
 
 const Home = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Home</h1>
-    <p>Welcome to the Home page.</p>
+    <Typography type={'title'}>Home</Typography>
+    <Typography type={'body'}>Welcome to the Home page.</Typography>
   </Layout>
 );
 
