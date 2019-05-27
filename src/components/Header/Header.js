@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Typography, Image } from 'components';
+import { Link, Typography, CrestImage } from 'components';
 import { colors } from 'theme';
 import styled from '@emotion/styled';
 
@@ -27,7 +27,7 @@ export const Header = ({ siteTitle, children }) => (
             alignItems: 'center',
           }}
         >
-          <Image name={'crest'} />
+          <CrestImage />
           <div>
             <Typography
               type={'title'}

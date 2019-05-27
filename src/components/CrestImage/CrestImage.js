@@ -14,29 +14,27 @@ import { colors } from 'theme';
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-export const Image = ({ name }) => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          image: file(relativePath: { eq: "crest.png" }) {
-            childImageSharp {
-              fluid(maxWidth: 100) {
-                ...GatsbyImageSharpFluid
-              }
+export const CrestImage = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        image: file(relativePath: { eq: "crest.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
-      `}
-      render={data => (
-        <div style={{ width: 100 }}>
-          <Img
-            fluid={data.image.childImageSharp.fluid}
-            fadeIn={false}
-            backgroundColor={colors.red}
-          />
-        </div>
-      )}
-    />
-  );
-};
+      }
+    `}
+    render={data => (
+      <div style={{ width: 100 }}>
+        <Img
+          fluid={data.image.childImageSharp.fluid}
+          fadeIn={false}
+          backgroundColor={colors.red}
+        />
+      </div>
+    )}
+  />
+);

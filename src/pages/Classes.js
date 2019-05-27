@@ -5,7 +5,7 @@ import { font } from 'theme';
 const Classes = () => (
   <Layout>
     <SEO title="Class Times" />
-    <Typography type={'title'}>Class Times</Typography>
+    <Typography type={'title'}>Classes</Typography>
     <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
       <div style={{ display: 'flex', flexDirection: 'row', flex: 1 }}>
         <div style={{ display: 'flex', flexDirection: 'row', flex: 0.5 }}>

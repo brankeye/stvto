@@ -1,7 +1,9 @@
 import React from 'react';
-import { Layout, SEO, Typography } from 'components';
+import { Layout, SEO, Typography, LineageImage } from 'components';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-const OurSchool = () => (
+const OurSchool = ({ data }) => (
   <Layout>
     <SEO title="Our School" />
     <Typography type={'title'}>Our School</Typography>
@@ -16,6 +18,11 @@ const OurSchool = () => (
       Though lineage isn't everything, we believe it's important for the drinker
       to consider the source of his water, in that spirit here is our lineage.
     </Typography>
+    <Img
+      fluid={data.lineage.childImageSharp.fluid}
+      alt=""
+      style={{ width: 250, margin: '0 auto' }}
+    />
     <Typography type={'title'}>Our Sifu</Typography>
     <Typography type={'body'}>
       A 4th generation student of Yip Man, Sifu started training martial arts in
@@ -23,9 +30,10 @@ const OurSchool = () => (
       Greco-Roman Wrestling and Tai Chi.
     </Typography>
     <Typography type={'body'}>
-      He attained his Gold Sash under John Peluso in 2001. He currently holds a
-      Martial Artist's Achievement Award Master Level 6 from the Confederation
-      of Canadian Wushu Organizations.
+      He attained his Gold Sash under{' '}
+      <a href={'http://ottawakungfucentre.com/'}>John Peluso</a> in 2001. He
+      currently holds a Martial Artist's Achievement Award Master Level 6 from
+      the Confederation of Canadian Wushu Organizations.
     </Typography>
     <Typography type={'body'}>
       Sifu believes firmly that the true value of Ving Tsun is in the living of
@@ -33,5 +41,17 @@ const OurSchool = () => (
     </Typography>
   </Layout>
 );
+
+export const query = graphql`
+  query {
+    lineage: file(relativePath: { eq: "lineage.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default OurSchool;
