@@ -9,14 +9,16 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Header, Navbar, Typography } from 'components';
 import styled from '@emotion/styled';
-import { font } from 'theme';
+import { font, mq } from 'theme';
 import 'sanitize.css';
 
 const Container = styled.div({
   margin: '0 auto',
-  minWidth: 600,
-  maxWidth: 800,
   padding: '1.45rem 1.0875rem',
+  width: '60%',
+  [mq.mobile]: {
+    width: '100%',
+  },
 });
 
 const Footer = styled.footer({

@@ -10,3 +10,10 @@ export const font = {
   mediumEmphasisColor: 'rgba(0, 0, 0, 0.60)',
   disabledColor: 'rgba(0, 0, 0, 0.38)',
 };
+
+export const mq = {
+  desktop: '@media (min-device-width: 1224px)',
+  mobile: '@media (max-width: 999px)',
+  desktopQuery: '(min-device-width: 1224px)',
+  mobileQuery: '@media (max-width: 999px)',
+};

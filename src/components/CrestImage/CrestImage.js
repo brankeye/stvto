@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { colors } from 'theme';
+import { colors, mq } from 'theme';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -28,7 +28,7 @@ export const CrestImage = () => (
       }
     `}
     render={data => (
-      <div style={{ width: 100 }}>
+      <div css={{ width: 100, [mq.mobile]: { width: 50 } }}>
         <Img
           fluid={data.image.childImageSharp.fluid}
           fadeIn={false}

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { font } from 'theme';
+import { font, mq } from 'theme';
 
 const isTitle = type => type === 'title';
 
@@ -10,16 +10,25 @@ const getStylesForType = type => {
       return {
         color: font.highEmphasisColor,
         fontSize: '2rem',
+        [mq.mobile]: {
+          fontSize: '1rem',
+        },
       };
     case 'subtitle':
       return {
         color: font.highEmphasisColor,
         fontSize: '1.5rem',
+        [mq.mobile]: {
+          fontSize: '0.9rem',
+        },
       };
     case 'body':
       return {
         color: font.mediumEmphasisColor,
         fontSize: '1rem',
+        [mq.mobile]: {
+          fontSize: '0.8rem',
+        },
       };
   }
 };

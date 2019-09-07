@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Typography, CrestImage } from 'components';
-import { colors } from 'theme';
+import { colors, mq } from 'theme';
 import styled from '@emotion/styled';
 
 const Container = styled.header({
@@ -12,18 +12,22 @@ export const Header = ({ siteTitle, children }) => (
   <header>
     <Container>
       <div
-        style={{
-          margin: `0 auto`,
-          minWidth: 600,
-          maxWidth: 800,
-          padding: `1.45rem 1.0875rem`,
+        css={{
+          margin: '0 auto',
+          width: '60%',
+          padding: '1.45rem 1.0875rem',
+          [mq.mobile]: {
+            margin: 0,
+            width: '100%',
+          },
         }}
       >
         <div
-          style={{
+          css={{
             display: 'flex',
             flexDirection: 'row',
             flex: 1,
+            justifyContent: 'flex-start',
             alignItems: 'center',
           }}
         >
@@ -31,17 +35,23 @@ export const Header = ({ siteTitle, children }) => (
           <div>
             <Typography
               type={'title'}
-              style={{
+              css={{
                 margin: 0,
-                marginLeft: '2rem',
-                letterSpacing: '0.2rem',
+                [mq.desktop]: {
+                  marginLeft: '2rem',
+                  letterSpacing: '0.2rem',
+                },
+                [mq.mobile]: {
+                  marginLeft: '1rem',
+                },
               }}
             >
               <Link
                 to="/"
-                style={{
+                css={{
                   color: '#FFFFFF',
                   textDecoration: `none`,
+                  textAlign: 'center',
                 }}
               >
                 {siteTitle}
@@ -49,11 +59,14 @@ export const Header = ({ siteTitle, children }) => (
             </Typography>
             <Typography
               type={'subtitle'}
-              style={{
+              css={{
                 margin: 0,
                 marginLeft: '2rem',
                 color: 'rgba(255, 255, 255, 0.90)',
                 fontSize: '1rem',
+                [mq.mobile]: {
+                  display: 'none',
+                },
               }}
             >
               Sensitivity, Coordination, Timing, Balance, and Relaxation
