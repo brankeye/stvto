@@ -92,13 +92,10 @@ const System = () => (
     <Typography type={'subtitle'}>
       Luk Dim Poon Kwan "6 1/2 Point Pole
     </Typography>
-    <Typography type={'body'}>
-      <blockquote>
-        “Luk Dim Poon Kwan, like other elements of Ving Tsun, needs to be
-        studied completely and for its own sake, not as a means to some other
-        end.”
-        <br />– Grandmaster Moy Yat
-      </blockquote>
+    <Typography type={'quote'}>
+      “Luk Dim Poon Kwan, like other elements of Ving Tsun, needs to be studied
+      completely and for its own sake, not as a means to some other end.”
+      <br />– Grandmaster Moy Yat
     </Typography>
     <Typography type={'body'}>
       The 6 1/2 Point Pole refers to the number of techniques in the form. This

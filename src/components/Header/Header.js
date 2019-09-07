@@ -29,6 +29,9 @@ export const Header = ({ siteTitle, children }) => (
             flex: 1,
             justifyContent: 'flex-start',
             alignItems: 'center',
+            [mq.mobile]: {
+              justifyContent: 'center',
+            },
           }}
         >
           <CrestImage />

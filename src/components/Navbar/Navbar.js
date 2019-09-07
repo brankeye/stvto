@@ -8,11 +8,18 @@ const Nav = styled.nav({
   margin: 0,
 });
 
-const NavList = styled.ul({ display: 'flex', flex: 1, listStyle: 'none' });
+const NavList = styled.ul({
+  display: 'flex',
+  flex: 1,
+  listStyle: 'none',
+  [mq.mobile]: {
+    justifyContent: 'center',
+  },
+});
 
 const NavItem = styled.li({
   marginRight: '2rem',
-  [mq.mobile]: { marginRight: '0.75rem' },
+  [mq.mobile]: { marginRight: '0.5rem' },
 });
 
 export const Navbar = ({ children }) => (
@@ -29,6 +36,6 @@ Navbar.Link = styled(Link)({
   textDecoration: 'none',
   color: colors.white,
   [mq.mobile]: {
-    fontSize: '0.8rem',
+    fontSize: '0.75rem',
   },
 });

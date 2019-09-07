@@ -30,6 +30,15 @@ const getStylesForType = type => {
           fontSize: '0.8rem',
         },
       };
+    case 'quote':
+      return {
+        color: font.mediumEmphasisColor,
+        fontSize: '1rem',
+        marginLeft: '2.5rem',
+        [mq.mobile]: {
+          fontSize: '0.8rem',
+        },
+      };
   }
 };
 
