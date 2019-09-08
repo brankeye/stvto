@@ -5,3 +5,4 @@ export { SEO } from './SEO';
 export { Navbar } from './Navbar';
 export { Link } from './Link';
 export { Typography } from './Typography';
+export { Anchor } from './Anchor';

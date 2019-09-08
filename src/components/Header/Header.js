@@ -15,7 +15,7 @@ export const Header = ({ siteTitle, children }) => (
         css={{
           margin: '0 auto',
           width: '60%',
-          padding: '1.45rem 1.0875rem',
+          padding: '1rem 1.0875rem',
           [mq.mobile]: {
             margin: 0,
             width: '100%',

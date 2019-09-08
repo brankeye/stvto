@@ -46,7 +46,13 @@ export const Typography = styled.p(
   {
     fontFamily: font.fontFamily,
   },
-  ({ type }) => getStylesForType(type)
+  ({ type, bold }) => {
+    const styles = getStylesForType(type);
+    return {
+      ...styles,
+      ...(bold && { fontWeight: 'bold' }),
+    };
+  }
 );
 
 Typography.defaultProps = {
