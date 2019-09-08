@@ -32,10 +32,22 @@ export const Navbar = ({ children }) => (
   </Nav>
 );
 
-Navbar.Link = styled(Link)({
+const NavLink = styled(Link)({
   textDecoration: 'none',
   color: colors.white,
   [mq.mobile]: {
     fontSize: '0.75rem',
   },
 });
+
+Navbar.Link = props => (
+  <NavLink
+    {...props}
+    css={
+      window.location.pathname === props.to && {
+        textDecoration: 'underline',
+        textDecorationColor: 'white',
+      }
+    }
+  />
+);

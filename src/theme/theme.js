@@ -12,8 +12,6 @@ export const font = {
 };
 
 export const mq = {
-  desktop: '@media (min-device-width: 1224px)',
-  mobile: '@media (max-width: 999px)',
-  desktopQuery: '(min-device-width: 1224px)',
-  mobileQuery: '@media (max-width: 999px)',
+  desktop: '@media (min-width: 1000px)',
+  mobile: '@media (max-width: 999.98px)',
 };
