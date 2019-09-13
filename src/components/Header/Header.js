@@ -1,57 +1,26 @@
 import React from 'react';
-import { Link, Navbar, Typography, CrestImage, Anchor } from 'components';
+import {
+  Link,
+  Navbar,
+  Typography,
+  CrestImage,
+  Anchor,
+  Content,
+} from 'components';
 import { colors, mq } from 'theme';
 import styled from '@emotion/styled';
 
 export const Header = ({ siteTitle, children }) => (
   <header>
-    <div
-      css={{
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: colors.black,
-        padding: '0 1rem',
-      }}
-    >
-      <div
-        css={{
-          margin: '0 auto',
-          width: '60%',
-          [mq.mobile]: {
-            margin: 0,
-            width: '100%',
-          },
-        }}
-      >
-        <Anchor href={'sms:6137095799'}>
-          <Typography type={'body'} color={'white'}>
-            Text/Call @ 613-709-5799
-          </Typography>
-        </Anchor>
-      </div>
-    </div>
-    <div
-      css={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        backgroundColor: colors.red,
-        padding: '1rem',
-      }}
-    >
-      <div
-        css={{
-          display: 'flex',
-          flexDirection: 'row',
-          margin: '0 auto',
-          width: '60%',
-          [mq.mobile]: {
-            margin: 0,
-            width: '100%',
-            justifyContent: 'center',
-          },
-        }}
-      >
+    <Content css={{ backgroundColor: colors.black }}>
+      <Anchor href={'sms:6137095799'}>
+        <Typography type={'body'} color={'white'}>
+          Text/Call @ 613-709-5799
+        </Typography>
+      </Anchor>
+    </Content>
+    <Content css={{ backgroundColor: colors.red }}>
+      <div css={{ display: 'flex', flexDirection: 'row', padding: '1rem 0' }}>
         <CrestImage />
         <div
           css={{
@@ -100,29 +69,14 @@ export const Header = ({ siteTitle, children }) => (
           </Typography>
         </div>
       </div>
-      <div
-        css={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          margin: '0 auto',
-          width: '60%',
-          [mq.mobile]: {
-            margin: 0,
-            width: '100%',
-            justifyContent: 'center',
-          },
-        }}
-      >
-        <Navbar>
-          <Navbar.Link to={'/'}>Our School</Navbar.Link>
-          <Navbar.Link to={'/classes'}>Classes</Navbar.Link>
-          <Navbar.Link to={'/faq'}>FAQ</Navbar.Link>
-          <Navbar.Link to={'/system'}>System</Navbar.Link>
-          <Navbar.Link to={'/family'}>Family</Navbar.Link>
-        </Navbar>
-      </div>
-    </div>
+      <Navbar>
+        <Navbar.Link to={'/'}>Our School</Navbar.Link>
+        <Navbar.Link to={'/classes'}>Classes</Navbar.Link>
+        <Navbar.Link to={'/faq'}>FAQ</Navbar.Link>
+        <Navbar.Link to={'/system'}>System</Navbar.Link>
+        <Navbar.Link to={'/family'}>Family</Navbar.Link>
+      </Navbar>
+    </Content>
   </header>
 );
 
