@@ -20,7 +20,16 @@ export const Header = ({ siteTitle, children }) => (
       </Anchor>
     </Content>
     <Content css={{ backgroundColor: colors.red }}>
-      <div css={{ display: 'flex', flexDirection: 'row', padding: '1rem 0' }}>
+      <div
+        css={{
+          display: 'flex',
+          flexDirection: 'row',
+          padding: '1rem 0',
+          [mq.mobile]: {
+            justifyContent: 'center',
+          },
+        }}
+      >
         <CrestImage />
         <div
           css={{
