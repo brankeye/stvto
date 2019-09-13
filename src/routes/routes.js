@@ -7,8 +7,7 @@ const createRoutes = routes =>
   }));
 
 module.exports = createRoutes([
-  ['/', 'Home'],
-  ['/our-school', 'OurSchool'],
+  ['/', 'OurSchool'],
   ['/classes', 'Classes'],
   ['/faq', 'FAQ'],
   ['/system', 'System'],

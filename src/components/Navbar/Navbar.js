@@ -19,7 +19,7 @@ const NavList = styled.ul({
 
 const NavItem = styled.li({
   marginRight: '2rem',
-  [mq.mobile]: { marginRight: '0.5rem' },
+  [mq.mobile]: { marginRight: '1rem' },
 });
 
 export const Navbar = ({ children }) => (
