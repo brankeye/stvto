@@ -13,11 +13,31 @@ import styled from '@emotion/styled';
 export const Header = ({ siteTitle, children }) => (
   <header>
     <Content css={{ backgroundColor: colors.black }}>
-      <Anchor href={'sms:6137095799'}>
-        <Typography type={'body'} color={'white'}>
-          Text/Call @ 613-709-5799
+      <div
+        css={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}
+      >
+        <Anchor href={'mailto:brandon@stvto.com'}>
+          <Typography type={'body'} color={'white'}>
+            brandon@stvto.com
+          </Typography>
+        </Anchor>
+        <Typography
+          type={'body'}
+          color={'white'}
+          css={{ marginLeft: 10, marginRight: 10 }}
+        >
+          /
         </Typography>
-      </Anchor>
+        <Anchor href={'sms:6137095799'}>
+          <Typography type={'body'} color={'white'}>
+            613-709-5799
+          </Typography>
+        </Anchor>
+      </div>
     </Content>
     <Content css={{ backgroundColor: colors.red }}>
       <div
