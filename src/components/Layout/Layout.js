@@ -11,7 +11,6 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { Header, Typography, Content } from 'components';
 import styled from '@emotion/styled';
-import { font, mq } from 'theme';
 
 const query = graphql`
   query SiteTitleQuery {

@@ -8,7 +8,6 @@ import {
   Content,
 } from 'components';
 import { colors, mq } from 'theme';
-import styled from '@emotion/styled';
 
 export const Header = ({ siteTitle, children }) => (
   <header>
@@ -22,19 +21,7 @@ export const Header = ({ siteTitle, children }) => (
       >
         <Anchor href={'mailto:brandon@stvto.com'}>
           <Typography type={'body'} color={'white'}>
-            brandon@stvto.com
-          </Typography>
-        </Anchor>
-        <Typography
-          type={'body'}
-          color={'white'}
-          css={{ marginLeft: 10, marginRight: 10 }}
-        >
-          /
-        </Typography>
-        <Anchor href={'sms:6137095799'}>
-          <Typography type={'body'} color={'white'}>
-            613-709-5799
+            contact: brandon@stvto.com
           </Typography>
         </Anchor>
       </div>
@@ -108,10 +95,6 @@ export const Header = ({ siteTitle, children }) => (
     </Content>
   </header>
 );
-
-const styles = {
-  center: {},
-};
 
 Header.defaultProps = {
   siteTitle: '',

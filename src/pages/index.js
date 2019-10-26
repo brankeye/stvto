@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, SEO, Typography, LineageImage } from 'components';
+import { Layout, SEO, Typography } from 'components';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 

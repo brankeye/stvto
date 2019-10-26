@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Image, SEO, Typography } from 'components';
+import { Layout, SEO, Typography } from 'components';
 
 const System = () => (
   <Layout>

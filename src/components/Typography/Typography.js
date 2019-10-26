@@ -1,46 +1,39 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { font, mq } from 'theme';
 
-const isTitle = type => type === 'title';
-
-const getStylesForType = type => {
-  switch (type) {
-    case 'title':
-      return {
-        color: font.highEmphasisColor,
-        fontSize: '2rem',
-        [mq.mobile]: {
-          fontSize: '1rem',
-        },
-      };
-    case 'subtitle':
-      return {
-        color: font.highEmphasisColor,
-        fontSize: '1.5rem',
-        [mq.mobile]: {
-          fontSize: '0.9rem',
-        },
-      };
-    case 'body':
-      return {
-        color: font.mediumEmphasisColor,
-        fontSize: '1rem',
-        [mq.mobile]: {
-          fontSize: '0.8rem',
-        },
-      };
-    case 'quote':
-      return {
-        color: font.mediumEmphasisColor,
-        fontSize: '1rem',
-        marginLeft: '2.5rem',
-        [mq.mobile]: {
-          fontSize: '0.8rem',
-        },
-      };
-  }
+const styles = {
+  title: {
+    color: font.highEmphasisColor,
+    fontSize: '2rem',
+    [mq.mobile]: {
+      fontSize: '1rem',
+    },
+  },
+  subtitle: {
+    color: font.highEmphasisColor,
+    fontSize: '1.5rem',
+    [mq.mobile]: {
+      fontSize: '0.9rem',
+    },
+  },
+  body: {
+    color: font.mediumEmphasisColor,
+    fontSize: '1rem',
+    [mq.mobile]: {
+      fontSize: '0.8rem',
+    },
+  },
+  quote: {
+    color: font.mediumEmphasisColor,
+    fontSize: '1rem',
+    marginLeft: '2.5rem',
+    [mq.mobile]: {
+      fontSize: '0.8rem',
+    },
+  },
 };
+
+const getStylesForType = type => styles[type];
 
 export const Typography = styled.p(
   {

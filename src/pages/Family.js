@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Image, SEO, Typography, Anchor } from 'components';
+import { Layout, SEO, Typography, Anchor } from 'components';
 
 const Family = () => (
   <Layout>

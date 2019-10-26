@@ -1,6 +1,5 @@
 import React from 'react';
-import { Layout, Image, SEO, Typography } from 'components';
-import { font } from 'theme';
+import { Layout, SEO, Typography } from 'components';
 
 const Classes = () => (
   <Layout>
