@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from '../Link';
 import styled from '@emotion/styled';
 import { colors, mq } from 'theme';
@@ -40,14 +40,24 @@ const NavLink = styled(Link)({
   },
 });
 
-Navbar.Link = props => (
-  <NavLink
-    {...props}
-    css={
-      window.location.pathname === props.to && {
-        textDecoration: 'underline',
-        textDecorationColor: 'white',
+const NavLinkContainer = props => {
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    setActive(window.location.pathname === props.to);
+  }, [props.to]);
+
+  return (
+    <NavLink
+      {...props}
+      css={
+        active && {
+          textDecoration: 'underline',
+          textDecorationColor: 'white',
+        }
       }
-    }
-  />
-);
+    />
+  );
+};
+
+Navbar.Link = NavLinkContainer;
