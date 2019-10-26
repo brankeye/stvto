@@ -1,1 +1,0 @@
-require('typeface-open-sans');
