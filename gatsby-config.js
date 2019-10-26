@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/stvto',
   siteMetadata: {
     title: `Sunny Tang Ving Tsun Orleans`,
     description: `A website for the club.`,
