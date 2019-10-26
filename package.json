@@ -13,6 +13,7 @@
     "gatsby-plugin-manifest": "2.2.20",
     "gatsby-plugin-module-resolver": "1.0.3",
     "gatsby-plugin-offline": "3.0.11",
+    "gatsby-plugin-preconnect": "^1.0.5",
     "gatsby-plugin-react-helmet": "3.1.10",
     "gatsby-plugin-sharp": "2.2.27",
     "gatsby-plugin-web-font-loader": "1.0.4",
@@ -22,7 +23,7 @@
     "react-dom": "16.9.0",
     "react-helmet": "5.2.1",
     "sanitize.css": "11.0.0",
-    "typeface-open-sans": "0.0.75"
+    "typeface-open-sans": "^0.0.75"
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "7.2.0",
