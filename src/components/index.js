@@ -1,5 +1,4 @@
 export { Header } from './Header';
-export { CrestImage } from './CrestImage';
 export { Layout } from './Layout';
 export { SEO } from './SEO';
 export { Navbar } from './Navbar';

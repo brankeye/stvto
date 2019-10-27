@@ -1,13 +1,7 @@
 import React from 'react';
-import {
-  Link,
-  Navbar,
-  Typography,
-  CrestImage,
-  Anchor,
-  Content,
-} from 'components';
+import { Link, Navbar, Typography, Anchor, Content } from 'components';
 import { colors, mq } from 'theme';
+import crestImage from 'images/crest.png';
 
 export const Header = ({ siteTitle, children }) => (
   <header>
@@ -37,7 +31,7 @@ export const Header = ({ siteTitle, children }) => (
           },
         }}
       >
-        <CrestImage />
+        <img src={crestImage} alt="crest" width={100} height={100} />
         <div
           css={{
             display: 'flex',

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Layout, SEO, Typography } from 'components';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import lineageImage from 'images/lineage.png';
 
 const OurSchool = ({ data }) => (
   <Layout>
@@ -18,9 +17,11 @@ const OurSchool = ({ data }) => (
       Though lineage isn't everything, we believe it's important for the drinker
       to consider the source of his water, in that spirit here is our lineage.
     </Typography>
-    <Img
-      fluid={data.lineage.childImageSharp.fluid}
-      alt=""
+    <img
+      src={lineageImage}
+      alt={'lineage'}
+      width={284}
+      height={198}
       style={{ width: 250, margin: '0 auto' }}
     />
     <Typography type={'title'}>Our Sifu</Typography>
@@ -41,17 +42,5 @@ const OurSchool = ({ data }) => (
     </Typography>
   </Layout>
 );
-
-export const query = graphql`
-  query {
-    lineage: file(relativePath: { eq: "lineage.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
 
 export default OurSchool;
